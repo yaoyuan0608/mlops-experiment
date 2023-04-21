@@ -1,0 +1,10 @@
+stages:
+  featurization:
+    cmd: python src/create_features.py
+    deps:
+    - data/imdb_data.csv
+    - data/imdb_data_fake.csv
+    - src/create_features.py
+    outs:
+    - data/test_data.csv
+    - data/train_data.csv
